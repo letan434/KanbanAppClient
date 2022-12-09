@@ -1,0 +1,9 @@
+.lift-avatar {
+  @apply cursor-pointer -ml-1 flex rounded-full transition-transform duration-100; }
+  .lift-avatar.is-active {
+    box-shadow: 0 0 0 4px #1255b9;
+    z-index: 1; }
+  .lift-avatar:hover {
+    transform: translateY(-5px); }
+
+/*# sourceMappingURL=board-filter.component.css.map */

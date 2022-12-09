@@ -1,0 +1,63 @@
+<ng-container *ngIf="isEditing; else readonlyModeTmpl">
+
+    <nz-range-picker
+    [nzShowTime]="{ nzFormat: 'HH:mm' }"
+    nzFormat="yyyy-MM-dd HH:mm"
+    [nzPlaceHolder]="['Start Time', 'End Time']"
+    ngModel
+    (ngModelChange)="onChange($event)"
+    (nzOnOk)="onOk($event)"
+    ></nz-range-picker>
+    <!-- <div class="pt-3 flex
+      items-center">
+        <app-button [isWorking]="isWorking"
+                  [className]="'btn-primary'"
+                  class="mr-2"
+                  (click)="save()">
+            Save</app-button>
+        <app-button (click)="cancel()"
+                  [className]="'btn-empty'">
+            Cancel
+        </app-button>
+    </div> -->
+</ng-container>
+
+<ng-template #readonlyModeTmpl>
+
+    <div nz-row>
+        <nz-range-picker
+        [nzShowTime]="{ nzFormat: 'HH:mm' }"
+        nzFormat="yyyy-MM-dd HH:mm"
+        [nzPlaceHolder]="['Start Time', 'End Time']"
+        [(ngModel)]='dateExpiration'
+         ngModel
+        (ngModelChange)="onChange($event)"
+        (nzOnCalendarChange)="onCalendarChange($event)"
+        (nzOnOk)="onOk($event)"
+        ></nz-range-picker>
+        <!-- <nz-form-label [nzSpan]="5" nzRequired></nz-form-label> -->
+        <div style="margin:0 8px 12px 0">
+            <app-button
+            [className]="'btn-primary'"
+            class="mr-2"
+            (click)="save()">
+             Save</app-button>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="ql-snow content-readonly"
+         *ngIf="!isEditing"
+         (click)="setEditMode(true)">
+        <div class="ql-editor"
+             [innerHTML]="issue.description || 'Click to add description'"></div>
+        <div class="icon-edit">
+            <i nz-icon
+               class="cursor-pointer"
+               title="Click to edit"
+               nzType="edit"
+               nzTheme="outline"></i>
+        </div>
+    </div> -->
+</ng-template>

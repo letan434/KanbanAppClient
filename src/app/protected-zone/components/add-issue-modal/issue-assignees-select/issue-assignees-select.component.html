@@ -1,0 +1,20 @@
+<nz-select class="w-full"
+           [formControl]="control"
+           nzMode="multiple"
+           [nzCustomTemplate]="assigneesSelectedTmpl"
+           [nzNotFoundContent]="noUserFoundTmpl"
+           nzNoAnimation>
+    <nz-option nzCustomContent
+               *ngFor="let user of users"
+               [nzValue]="user.id"
+               [nzLabel]="user.userName">
+        <app-user [user]="user"></app-user>
+    </nz-option>
+</nz-select>
+<ng-template #assigneesSelectedTmpl
+             let-selected>
+    <app-user [user]="getUser(selected.nzValue)"></app-user>
+</ng-template>
+<ng-template #noUserFoundTmpl>
+    No user found.
+</ng-template>

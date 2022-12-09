@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACT,+EAA+E;EAC/E,cAAc,EAAE,IAAI;EAEpB,oCAAwB;IACtB,UAAU,EAAE,0CAA0C;IAEtD,yEAAqC;MACnC,UAAU,EAAE,0CAA0C;;AAK5D,iBAAkB;EAChB,UAAU,EAAE,UAAU;EACtB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,yGACwB;;AAIpC,iCAAY;EACV,gBAAgB,EAAE,wBAAwB;EAC1C,MAAM,EAAE,eAAe;EACvB,MAAM,EAAE,GAAG;EAEX,wCAAO;IACL,OAAO,EAAE,CAAC;;AAKhB,mBAAoB;EAClB,UAAU,EAAE,0CAA0C",
+"sources": ["board-dnd-list.component.scss"],
+"names": [],
+"file": "board-dnd-list.component.css"
+}

@@ -1,0 +1,14 @@
+.input-upload {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    left:0;
+}
+.button-upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}

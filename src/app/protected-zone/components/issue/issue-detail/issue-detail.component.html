@@ -1,0 +1,70 @@
+<div *ngIf="issue; else loaderTmpl"
+     class="w-full h-full" [class.pl-2]="isShowCloseButton" >
+    <div class="flex items-center pt-2 text-textDarkest">
+        <app-issue-type [issue]="issue"></app-issue-type>
+        <div class="flex-auto"></div>
+<!--        <a target="_blank"-->
+<!--           href="https://www.facebook.com/thegooner.434">-->
+<!--            <app-button icon="feedback"-->
+<!--                      className="btn-empty">-->
+<!--                Give Feedback-->
+<!--            </app-button>-->
+<!--        </a>-->
+<!--        <app-button icon='trash'-->
+<!--                  [className]="'btn-empty'"-->
+<!--                  (click)="openDeleteIssueModal()">-->
+<!--        </app-button>-->
+        <app-button *ngIf="isShowCloseButton"
+                  icon="expand"
+                  (click)="openIssuePage()"
+                  [iconSize]="24"
+                  [className]="'btn-empty'">
+        </app-button>
+        <app-button *ngIf="isShowCloseButton"
+                  icon="times"
+                  [iconSize]="24"
+                  (click)="closeModal()"
+                  [className]="'btn-empty'">
+        </app-button>
+    </div>
+    <div class="flex w-full flex-wrap pb-16">
+        <div class="sm:w-full md:w-7/12 lg:w-4/6 pr-10">
+            <app-issue-title [issue]="issue"></app-issue-title>
+
+
+            <div class="pt-4 pb-2 text-15 font-medium">Description</div>
+            <app-issue-description [issue]="issue"></app-issue-description>
+            <div class="pt-4 pb-2 text-15 font-medium">Expiration date</div>
+            <app-issue-expiration-date [issue]="issue"></app-issue-expiration-date>
+
+            <div class="pt-4 pb-2 text-15 font-medium">Attachments</div>
+            <app-issue-attachments [issue]="issue"></app-issue-attachments>
+
+            <div class="pt-4 pb-2 text-15 font-medium">Comments</div>
+            <app-issue-comments [issue]="issue"></app-issue-comments>
+        </div>
+        <div class="sm:w-full md:w-5/12 lg:w-2/6 pt-1">
+            <app-issue-status [issue]="issue"></app-issue-status>
+            <app-issue-reporter [issue]="issue"
+                            [users]="projectQuery.users$ | async">
+            </app-issue-reporter>
+            <app-issue-assignees [issue]="issue"
+                             [users]="projectQuery.users$ | async">
+            </app-issue-assignees>
+            <app-issue-priority [issue]="issue"></app-issue-priority>
+
+            <div class="mt-3 pt-3 leading-loose border-t border-borderLightest text-textMedium text-13">
+                <div>
+                    Created - {{ issue.createDate | date:"medium" }}
+                </div>
+                <div>
+                    Updated - {{ issue.lastModifiedDate | date:"medium" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #loaderTmpl>
+    <app-issue-loader></app-issue-loader>
+</ng-template>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACF,qBAAqB;EACrB,aAAa,EAAE,GAAG;;AAGtB,WAAY;EACR,YAAY,EAAE,YAAY;EAC1B,MAAM,EAAE,IAAI;EACZ,qBAAqB;;AAGzB,MAAO;EACH,0FAA0F;EAC1F,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,qCAAqC;;AAGrD,YAAa;EACT,yBAAyB",
+"sources": ["issue-card.component.scss"],
+"names": [],
+"file": "issue-card.component.css"
+}

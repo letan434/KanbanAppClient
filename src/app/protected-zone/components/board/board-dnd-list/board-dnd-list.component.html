@@ -1,0 +1,17 @@
+<div class="status-list">
+    <div class="px-3 pb-4 pt-3 uppercase text-textMedium text-13 truncate">
+        {{ status.name }}
+        <span class="lowercase text-13">{{ issuesCount }}</span>
+    </div>
+    <div class="h-full pl-2"
+         cdkDropList
+         [cdkDropListData]="issues"
+         [id]="status.id"
+         (cdkDropListDropped)="drop($event)">
+        <app-issue-card *ngFor="let issue of issues"
+                    [issue]="issue"
+                    cdkDrag
+                    [cdkDragData]="issue">
+        </app-issue-card>
+    </div>
+</div>

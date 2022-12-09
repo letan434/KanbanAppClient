@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACN,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,OAAO;EAEd,oDAES;IACL,KAAK,EAAE,OAAO;EAGlB,eAAQ;IACJ,eAAe,EAAE,SAAS",
+"sources": ["issue-assignees.component.scss"],
+"names": [],
+"file": "issue-assignees.component.css"
+}

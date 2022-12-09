@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACX,uDAAuD",
+"sources": ["search-drawer.component.scss"],
+"names": [],
+"file": "search-drawer.component.css"
+}

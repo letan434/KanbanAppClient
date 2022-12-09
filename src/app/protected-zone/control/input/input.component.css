@@ -1,0 +1,42 @@
+.input-container {
+  position: relative;
+  display: flex;
+  height: 32px;
+  width: 100%; }
+  .input-container.flat {
+    height: 40px; }
+    .input-container.flat .input {
+      flex-grow: 1;
+      border: none;
+      border-bottom: 2px solid #0052cc;
+      font-size: 21px;
+      background: #fff; }
+      .input-container.flat .input::placeholder {
+        @apply text-textLight;
+        font-size: 21px; }
+      .input-container.flat .input:focus, .input-container.flat .input:hover {
+        border: none;
+        border-bottom: 2px solid #0052cc;
+        box-shadow: none;
+        background: #fff;
+        outline: 0; }
+
+.invalid, .invalid:focus {
+  border: 1px solid #e13c3c;
+  box-shadow: none; }
+
+.input-icon-container {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .input-icon-container.right {
+    left: auto;
+    right: 0;
+    cursor: pointer; }
+
+/*# sourceMappingURL=input.component.css.map */

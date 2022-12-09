@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAgB;EACd,yEAAyE;EACzE,KAAK,EAAE,oBAAoB;EAC3B,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,KAAK",
+"sources": ["board-dnd.component.scss"],
+"names": [],
+"file": "board-dnd.component.css"
+}

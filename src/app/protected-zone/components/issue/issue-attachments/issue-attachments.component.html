@@ -1,0 +1,32 @@
+<!--<nz-upload       nzType="drag"-->
+<!--                 [nzMultiple]="true"-->
+<!--                 [nzShowUploadList]="false"-->
+<!--                 (nzChange)="handleChange($event)"-->
+<!--                 [nzRemove]	="removeAttachments($event)"-->
+<!--                 [nzDisabled]="false"-->
+
+<!--                 (onSelect)="selectAttachments($event)" showCancelButton="false"-->
+<!--              accept="image/*" maxFileSize="1000000">-->
+
+<!--</nz-upload>-->
+<!--<ul>-->
+<!--    <li *ngFor="let file of attachments"><a-->
+<!--            href="{{backendApiUrl + file.filePath}}">{{file.fileName}}</a>-->
+<!--        &nbsp;-->
+<!--        <p-button icon="pi pi-trash" class="ui-button-danger"-->
+<!--                  (click)="deleteAttachment(file.id)"></p-button>-->
+<!--    </li>-->
+<!--</ul>-->
+<div class="pb-2 text-15 font-medium">
+    <app-button icon="attach" [iconSize]="24" [className]="'btn-empty'">
+        Attach
+    </app-button>
+    <input type="file" id="input" multiple class="input-upload" (change)="selectFile($event)">
+</div>
+
+<div *ngFor="let item of issue.attachments" style="display: flex;">
+    <!-- <app-svg-icon name = "image" *ngIf="item.fileType == '.jpg' || item.fileType == 'png'"></app-svg-icon>   -->
+    <img src="/assets/images/{{item.fileType}}.png" class="user-avatar" style="height: 24px; width: 24px;"/>
+    <a href = "{{envUrl + item.filePath}}"  target="_blank" rel="noopener" style="margin-top: 4px;">&nbsp;{{item.fileName}}</a>
+    <app-button icon="remove" [iconSize]="16" [className]="'btn-empty'" (click) = "removeAttach(item)" title="remove attach"></app-button>
+</div>

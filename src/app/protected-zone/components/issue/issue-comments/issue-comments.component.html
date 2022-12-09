@@ -1,0 +1,7 @@
+<app-issue-comment [createMode]="true"
+               [issueId]="issue?.id">
+
+</app-issue-comment>
+<app-issue-comment *ngFor="let comment of issue?.comments"
+               [comment]="comment">
+</app-issue-comment>

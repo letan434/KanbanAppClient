@@ -1,0 +1,31 @@
+.project-form {
+  max-width: 640px;
+}
+.form-input {
+  height: 100%;
+  width: 100%;
+  padding: 0.325rem 0.75rem;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  color: #172b4d;
+  transition: background 0.1s;
+  font-size: 15px;
+
+  &:hover {
+    background: #ebecf0;
+  }
+
+  &:focus {
+    background: #fff;
+    border: 1px solid lightskyblue;
+    box-shadow: 0 0 0 1px lightskyblue;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+.image-input-setting{
+  max-height: 500px;
+}

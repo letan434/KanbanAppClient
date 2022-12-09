@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAa;EACX,+EAA+E;EAE/E,sBAAY;IACV,UAAU,EAAE,iBAAiB;IAC7B,OAAO,EAAE,CAAC;EAGZ,kBAAQ;IACN,SAAS,EAAE,gBAAgB",
+"sources": ["board-filter.component.scss"],
+"names": [],
+"file": "board-filter.component.css"
+}

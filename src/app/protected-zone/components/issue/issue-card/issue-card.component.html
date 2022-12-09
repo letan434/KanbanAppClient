@@ -1,0 +1,43 @@
+<div class="issue-wrap">
+    <div (click)="openIssueModal(issue.id)"
+         class="issue">
+        <p class="pb-3 text-15 text-textDarkest">
+            {{ issue.title }}
+        </p>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center ml-1">
+                <app-avatar *ngFor="let user of assignees"
+                          [className]="'shadow-outline-white -ml-1'"
+                          [size]="24"
+                          nz-tooltip
+                          [nzTooltipMouseEnterDelay]="0.3"
+                          nzTooltipTitle="Assignee: {{ user.userName }}"
+                          nzTooltipPlacement="bottom"
+                          [avatarUrl]="user.avatarUrl">
+                </app-avatar>
+                <span [class.ml-3]="assignees?.length" class="uppercase">
+                    {{issue.sample}}-{{issue.id}}
+                </span>
+            </div>
+            <div class="flex items-center">
+                <app-svg-icon class="text-textMedium mr-1"
+                          [name]="issueTypeIcon"
+                          nz-tooltip
+                          [nzTooltipMouseEnterDelay]="0.3"
+                          [nzTooltipTitle]="issue.sample"
+                          nzTooltipPlacement="bottom"
+                          [size]="20">
+                </app-svg-icon>
+
+                <app-svg-icon [name]="priorityIcon.icon"
+                          nz-tooltip
+                          [nzTooltipMouseEnterDelay]="0.3"
+                          [nzTooltipTitle]="priorityIcon.value"
+                          nzTooltipPlacement="bottom"
+                          [size]="20"
+                          [style.color]="priorityIcon.color">
+                </app-svg-icon>
+            </div>
+        </div>
+    </div>
+</div>

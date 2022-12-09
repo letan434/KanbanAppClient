@@ -1,0 +1,74 @@
+.btn {
+  @apply text-btn inline-flex items-center justify-center h-8 align-middle leading-none whitespace-no-wrap rounded-sm transition-all duration-100 appearance-none cursor-pointer select-none px-3; }
+  .btn.icon-only {
+    @apply px-2; }
+    .btn.icon-only .with-padding {
+      padding: 0; }
+  .btn.disabled {
+    @apply opacity-50 cursor-default pointer-events-none; }
+  .btn:focus, .btn:active {
+    outline-color: #1890ff; }
+  .btn.no-padding-left {
+    padding-left: 0; }
+  .btn.no-padding-right {
+    padding-right: 0; }
+
+.btn-primary {
+  color: white;
+  font-weight: 500;
+  background: #0052cc; }
+  .btn-primary:disabled {
+    cursor: not-allowed;
+    background-color: #66a4ff; }
+  .btn-primary:not(:disabled):hover {
+    background: #0067ff; }
+  .btn-primary:not(:disabled):active {
+    background: #003e99; }
+  .btn-primary:not(:disabled).active {
+    background: #003e99 !important; }
+
+.btn-success {
+  color: white;
+  font-weight: 500;
+  background: #0b875b; }
+  .btn-success:disabled {
+    cursor: not-allowed;
+    background-color: #3cefb0; }
+  .btn-success:not(:disabled):hover {
+    background: #0fb67b; }
+  .btn-success:not(:disabled):active {
+    background: #07583b; }
+  .btn-success:not(:disabled).active {
+    background: #07583b !important; }
+
+.btn-secondary {
+  @apply text-textDark font-normal;
+  background: #f4f5f7; }
+  .btn-secondary:not(:disabled):hover {
+    @apply bg-backgroundLight; }
+  .btn-secondary:not(:disabled):active {
+    @apply bg-backgroundLightPrimary;
+    color: #0052cc; }
+
+.btn-empty {
+  background: white;
+  outline: none;
+  @apply text-textDark; }
+  .btn-empty:focus, .btn-empty:active {
+    outline: none; }
+  .btn-empty:not(:disabled):hover {
+    @apply bg-backgroundLight; }
+  .btn-empty:not(:disabled):active {
+    @apply bg-backgroundLightPrimary;
+    color: #0052cc; }
+  .btn-empty:not(:disabled).is-active {
+    background-color: #deebff;
+    @apply text-textDark; }
+
+.with-padding {
+  @apply pl-2; }
+
+.is-active {
+  @apply text-textLink bg-backgroundLightPrimary; }
+
+/*# sourceMappingURL=button.component.css.map */

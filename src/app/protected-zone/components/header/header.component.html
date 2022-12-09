@@ -1,0 +1,48 @@
+<nav class="flex items-center justify-between flex-wrap p-2">
+  <div class="flex items-center mr-2">
+    <img src="./assets/images/logo2.jpeg" width="100px" class ="h-24 w-24 object-cover rounded-full">
+  </div>
+<!--  <div class="block lg:hidden">-->
+<!--    <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">-->
+<!--      <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>-->
+<!--    </button>-->
+<!--  </div>-->
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="text-sm lg:flex-grow">
+      <div class="relative">
+          <span class="text-gray-700">Project</span>
+          <select class="mt-1 block"   (ngModelChange)="setLocalProjecId($event)" name="project" title="Select Project of User">
+            <option [ngValue]="letproject" *ngFor="let letproject of projects">{{letproject.name}}</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+<!--    <a class="text-[2.23rem]" href="#">KanbanApp </a>-->
+<!--    <button (click)="toggleSidebar()" class="py-2 px-4 border border-transparent-->
+<!--     shadow-sm text-sm font-medium rounded-md text-white bg-red-400" type="button">-->
+<!--      <i aria-hidden="true" class="fa fa-bars text-muted"> sideBar</i>-->
+<!--    </button>-->
+  <div class="relative">
+    <button (click)="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+      <span>Acount</span>
+      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div *ngIf="open" class="absolute right-0 w-40 mt-2 py-2 bg-white border rounded shadow-xl">
+      <a href="#" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-purple-500 hover:text-white">Settings</a>
+      <div class="py-2">
+        <hr/>
+      </div>
+      <a (click)="signout()" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-purple-500 hover:text-white">
+        Logout
+      </a>
+    </div>
+  </div>
+<!--  <div class="nav-item dropdown" ngbDropdown style="float: right;">-->
+<!--      <a (click)="signout()" [routerLink]="['/login']" class="dropdown-item">-->
+<!--        <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}-->
+<!--      </a>-->
+<!--  </div>-->
+</nav>
+<hr/>
+

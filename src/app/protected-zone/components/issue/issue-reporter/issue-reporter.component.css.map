@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACP,eAAe;EACf,UAAU,EAAE,IAAI",
+"sources": ["issue-reporter.component.scss"],
+"names": [],
+"file": "issue-reporter.component.css"
+}

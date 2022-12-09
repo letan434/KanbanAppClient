@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACP,oBAAoB",
+"sources": ["issue-modal.component.scss"],
+"names": [],
+"file": "issue-modal.component.css"
+}

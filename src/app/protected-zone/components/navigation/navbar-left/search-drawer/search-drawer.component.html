@@ -1,0 +1,41 @@
+<div class="mb-10">
+    <app-input [control]="searchControl"
+             containerClassName="flat text-textMedium"
+             icon="search"
+             [iconSize]="26"
+             placeholder="Search issues by summary, description...">
+    </app-input>
+</div>
+
+<ng-container *ngIf="hasSearchTermInput; else noSearchInputTmpl">
+    <ng-container *ngIf="results$ | async as results">
+        <ng-container *ngIf="results?.length; else noResultTmpl">
+            <div class="section-title">Issues Result</div>
+            <app-issue-result *ngFor="let issue of results"
+                          (click)="openIssueModal(issue)"
+                          [issue]="issue"></app-issue-result>
+        </ng-container>
+    </ng-container>
+</ng-container>
+
+<ng-template #noSearchInputTmpl>
+    <ng-container *ngIf="recentIssues$ | async as recentIssues">
+        <ng-container *ngIf="recentIssues?.length; else noResultTmpl">
+            <div class="section-title">Recent Issues</div>
+            <app-issue-result *ngFor="let issue of recentIssues"
+                          (click)="openIssueModal(issue)"
+                          [issue]="issue"></app-issue-result>
+        </ng-container>
+    </ng-container>
+</ng-template>
+
+<ng-template #noResultTmpl>
+    <div class="pt-10 flex flex-col justify-center items-center">
+        <app-svg-icon [name]="'no-result'"
+                  [size]="125"></app-svg-icon>
+        <div class="pt-8 font-medium text-xl">
+            We couldn't find anything matching your search
+        </div>
+        <div class="pt-2 text-15">Try again with a different term.</div>
+    </div>
+</ng-template>

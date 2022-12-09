@@ -1,0 +1,56 @@
+/*
+Error: File to import not found or unreadable: tailwindcss/base.
+        on line 11 of styles.scss
+
+6: @import 'ng-zorro-antd/select/style/index.min.css';
+7: @import 'ng-zorro-antd/drawer/style/index.min.css';
+8: @import 'ng-zorro-antd/notification/style/index.min.css';
+9: @import 'ng-zorro-antd/popover/style/index.min.css';
+10: 
+11: @import 'tailwindcss/base';
+12: @import 'tailwindcss/components';
+13: @import 'tailwindcss/utilities';
+14: 
+15: .pre-bootstrapping-container {
+16:     @apply w-full h-full relative;
+
+Backtrace:
+styles.scss:11
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/lexuantan/.rbenv/versions/2.7.1/bin/sass:23:in `load'
+/Users/lexuantan/.rbenv/versions/2.7.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: tailwindcss/base.\A         on line 11 of styles.scss\A \A 6: @import 'ng-zorro-antd/select/style/index.min.css';\A 7: @import 'ng-zorro-antd/drawer/style/index.min.css';\A 8: @import 'ng-zorro-antd/notification/style/index.min.css';\A 9: @import 'ng-zorro-antd/popover/style/index.min.css';\A 10: \A 11: @import 'tailwindcss/base';\A 12: @import 'tailwindcss/components';\A 13: @import 'tailwindcss/utilities';\A 14: \A 15: .pre-bootstrapping-container {\A 16:     @apply w-full h-full relative;"; }

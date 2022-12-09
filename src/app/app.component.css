@@ -1,0 +1,66 @@
+/*
+Error: File to import not found or unreadable: quill.
+        on line 1 of core/styles/custom.scss
+        from line 1 of app.component.scss
+
+1: @import './core/styles/custom';
+2: 
+3: #app-frame {
+4:     position: absolute;
+5:     width: 100vw;
+6:     height: 100vh;
+
+Backtrace:
+core/styles/custom.scss:1
+app.component.scss:1
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/lexuantan/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/lexuantan/.rbenv/versions/2.7.1/bin/sass:23:in `load'
+/Users/lexuantan/.rbenv/versions/2.7.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: quill.\A         on line 1 of core/styles/custom.scss\A         from line 1 of app.component.scss\A \A 1: @import './core/styles/custom';\A 2: \A 3: #app-frame {\A 4:     position: absolute;\A 5:     width: 100vw;\A 6:     height: 100vh;"; }

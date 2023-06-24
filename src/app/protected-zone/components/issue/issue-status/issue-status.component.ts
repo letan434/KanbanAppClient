@@ -18,11 +18,17 @@ export class IssueStatusComponent implements OnInit {
     ngOnInit(): void {
         this._projectQuery.statuses$.subscribe(
             (values) => {
-                this.issueStatuses = values;
+                if(!this.issue.status.noDisabled){
+                    this.issueStatuses = [];
+                }else{
+                    this.issueStatuses = values.filter(x=>x.noDisabled);
+                }
             }
         );
+
     }
     updateIssue(status1: StatusModel) {
+        if(!status1.noDisabled) return;
         const newPosition = this._projectQuery.lastIssuePosition(status1);
         this._projectService.updateIssueStatus({
             ...this.issue,

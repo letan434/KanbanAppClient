@@ -41,6 +41,8 @@ export class BoardDndListComponent implements OnInit {
         this._projectQuery.statuses$.subscribe(
             (values) => {
                 this.statuses = values;
+                console.log(values);
+
             }
         );
         combineLatest([this.issues$, this._filterQuery.all$])
@@ -51,12 +53,14 @@ export class BoardDndListComponent implements OnInit {
     }
 
     drop(event: CdkDragDrop<Issue[]>) {
+
         const newIssue: Issue = { ...event.item.data };
         const newIssues = [...event.container.data];
+        if(!this.status.noDisabled) return;
         if (event.previousContainer === event.container) {
             newIssues.map((item, index)=>{
                 if(item.id === newIssue.id){
-                    newIssues[index].lastModifiedDate = DateUtil.getNow();                    
+                    newIssues[index].lastModifiedDate = DateUtil.getNow();
                 }
             })
             moveItemInArray(newIssues, event.previousIndex, event.currentIndex);
@@ -71,7 +75,7 @@ export class BoardDndListComponent implements OnInit {
                     this._projectService.getDetail(localStorage.getItem('projectCurrentId'));
                 }
             );
-        } else {            
+        } else {
             transferArrayItem(
                 event.previousContainer.data,
                 newIssues,
@@ -97,22 +101,22 @@ export class BoardDndListComponent implements OnInit {
         }
     }
 
-    private updateListPosition(newList: Issue[]) {        
+    private updateListPosition(newList: Issue[]) {
         // newList.forEach((issue, idx) => {
         //     const newIssueWithNewPosition = { ...issue, listPosition: idx + 1};
         //     this._projectService.updateIssueStatus(newIssueWithNewPosition);
         // });
-        var result: Issue[] = [];     
+        var result: Issue[] = [];
         newList.forEach((issue, idx) => {
             result.push({ ...issue, listPosition: idx + 1});
         });
         return result;
     }
-    private updateListPosition1(newList: Issue[]): Issue[] {   
+    private updateListPosition1(newList: Issue[]): Issue[] {
         newList.sort(function (a, b) {
             return a.listPosition - b.listPosition;
           });
-        var result: Issue[] = [];     
+        var result: Issue[] = [];
         newList.forEach((issue, idx) => {
             result.push({ ...issue, listPosition: idx + 1});
         });

@@ -21,7 +21,7 @@ export class BoardComponent implements OnInit, OnDestroy, OnChanges {
     private subscription: Subscription[] = [];
     ngOnInit(): void {
       console.log(111111111);
-      
+
         // this.subscription.push(this.activeRoute.params.subscribe(params => {
         //     this.projectCurrentId = params['id'];
         //   }));
@@ -32,6 +32,8 @@ export class BoardComponent implements OnInit, OnDestroy, OnChanges {
         // setInterval(() => console.log(111222222222222)
         // , 10000);
         this.projectsService.getDetail(this.projectCurrentId);
+        // this.projectsService.getRoleProject(this.projectCurrentId);
+
         this.projectsService.GetUserCurrent(this.projectCurrentId, this.authService.profile.sub);
         this.projectQuery.all$.subscribe(value => {
           if (value.name) {
@@ -53,7 +55,7 @@ export class BoardComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(222222);
-    
+
     this.projectsService.getDetail(this.projectCurrentId);
   }
 

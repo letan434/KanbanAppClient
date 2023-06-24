@@ -65,10 +65,8 @@ export class IssueExpirationDateComponent implements OnInit {
         startDate: this.dateExpiration[0],
         endDate:  this.dateExpiration[1],
       }).subscribe(value=>{
-        console.log(value);
-        if(value){
           this.notificationService.showSuccess(MessageConstants.UPDATED_OK_MSG);
-        }
+
       },
       (err)=>{
         this.notificationService.showError(MessageConstants.SYSTEM_ERROR_MSG);

@@ -3,4 +3,5 @@ export class StatusModel {
   name: string;
   description: string;
   projectId: string;
+  noDisabled: boolean;
 }

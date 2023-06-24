@@ -64,6 +64,34 @@ export class ProjectsService extends BaseService {
         })
       ).subscribe();
   }
+//   getRoleProject(id) {
+//     this.http.get<StatusModel[]>(`${environment.apiUrl}/api/projects/${id}/roleProject`, { headers: this._sharedHeaders })
+//       .pipe(
+//         setLoading(this._store),
+//         tap((statuses) => {
+//             console.log(statuses, "statusesstatusesstatuses");
+
+//             statuses.map(
+//                 val=>{
+//                     this._store.update((state) => {
+//                         const statuses = arrayUpsert(state.statuses, val.id, val);
+//                         console.log("ssss", statuses);
+
+//                         return {
+//                           ...state,
+//                           ...statuses
+//                         };
+//                       });
+//                 }
+//             )
+
+//         }),
+//         catchError((error) => {
+//           this._store.setError(error);
+//           return of(error);
+//         })
+//       ).subscribe();
+//   }
   updateIssueType(issue: Issue) {
     issue.lastModifiedDate = DateUtil.getNow();
     this._store.update((state) => {

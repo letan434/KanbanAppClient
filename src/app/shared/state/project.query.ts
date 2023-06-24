@@ -39,4 +39,5 @@ export class ProjectQuery extends Query<ProjectState> {
       const raw = this.store.getValue();
       return raw?.name;
     }
+
 }

@@ -7,108 +7,108 @@ $secondary: #f4f5f7;
 $jira-bg: rgb(222, 235, 255);
 
 .btn {
-    @apply text-btn inline-flex items-center justify-center h-8 align-middle leading-none whitespace-no-wrap rounded-sm transition-all duration-100 appearance-none cursor-pointer select-none px-3;
+  @apply text-btn inline-flex items-center justify-center h-8 align-middle leading-none whitespace-nowrap rounded-sm transition-all duration-100 appearance-none cursor-pointer select-none px-3;
 
-    &.icon-only {
-        @apply px-2;
+  &.icon-only {
+    @apply px-2;
 
-        .with-padding {
-            padding: 0;
-        }
+    .with-padding {
+      padding: 0;
     }
+  }
 
-    &.disabled {
-        @apply opacity-50 cursor-default pointer-events-none;
-    }
+  &.disabled {
+    @apply opacity-50 cursor-default pointer-events-none;
+  }
 
-    &:focus,
-    &:active {
-        outline-color: #1890ff;
-    }
+  &:focus,
+  &:active {
+    outline-color: #1890ff;
+  }
 
-    &.no-padding-left {
-        padding-left: 0;
-    }
+  &.no-padding-left {
+    padding-left: 0;
+  }
 
-    &.no-padding-right {
-        padding-right: 0;
-    }
+  &.no-padding-right {
+    padding-right: 0;
+  }
 }
 
 @mixin buttonBackground($btn-variant, $background) {
-    $background-dark: darken($background, 10%);
-    $background-light: lighten($background, 10%);
+  $background-dark: darken($background, 10%);
+  $background-light: lighten($background, 10%);
 
-    .btn-#{$btn-variant} {
-        color: white;
-        font-weight: 500;
-        background: $background;
-        &:disabled {
-            cursor: not-allowed;
-            background-color: lighten($background, 30%);
-        }
-
-        &:not(:disabled) {
-            &:hover {
-                background: $background-light;
-            }
-            &:active {
-                background: $background-dark;
-            }
-            &.active {
-                background: $background-dark !important;
-            }
-        }
+  .btn-#{$btn-variant} {
+    color: white;
+    font-weight: 500;
+    background: $background;
+    &:disabled {
+      cursor: not-allowed;
+      background-color: lighten($background, 30%);
     }
+
+    &:not(:disabled) {
+      &:hover {
+        background: $background-light;
+      }
+      &:active {
+        background: $background-dark;
+      }
+      &.active {
+        background: $background-dark !important;
+      }
+    }
+  }
 }
 @include buttonBackground(primary, $primary);
 @include buttonBackground(success, $success);
 
 .btn-secondary {
-    @apply text-textDark font-normal;
-    background: $secondary;
+  @apply text-textDark font-normal;
+  background: $secondary;
 
-    &:not(:disabled) {
-        &:hover {
-            @apply bg-backgroundLight;
-        }
-
-        &:active {
-            @apply bg-backgroundLightPrimary;
-            color: $primary;
-        }
+  &:not(:disabled) {
+    &:hover {
+      @apply bg-backgroundLight;
     }
+
+    &:active {
+      @apply bg-backgroundLightPrimary;
+      color: $primary;
+    }
+  }
 }
 
 .btn-empty {
-    background: white;
+  background: white;
+  outline: none;
+  @apply text-textDark;
+
+  &:focus,
+  &:active {
     outline: none;
-    @apply text-textDark;
+  }
 
-    &:focus,
+  &:not(:disabled) {
+    &:hover {
+      @apply bg-backgroundLight;
+    }
     &:active {
-        outline: none;
+      @apply bg-backgroundLightPrimary;
+      color: $primary;
     }
-
-    &:not(:disabled) {
-        &:hover {
-            @apply bg-backgroundLight;
-        }
-        &:active {
-            @apply bg-backgroundLightPrimary;
-            color: $primary;
-        }
-        &.is-active {
-            background-color: $jira-bg;
-            @apply text-textDark;
-        }
+    &.is-active {
+      background-color: $jira-bg;
+      @apply text-textDark;
     }
+  }
 }
 
 .with-padding {
-    @apply pl-2;
+  @apply pl-2;
 }
 
 .is-active {
-    @apply text-textLink bg-backgroundLightPrimary;
+  @apply text-textLink bg-backgroundLightPrimary;
 }

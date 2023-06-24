@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "c1de04ca-fe46-4ab0-8c2d-a14780c5b3cd"
-  },
+ 
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -104,10 +102,8 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "KanbanClient:build",
-              "customWebpackConfig": {
-                  "path": "./webpack.config.js"
-              }
+            "browserTarget": "KanbanClient:build"
+              
           },
           "configurations": {
             "production": {
@@ -136,19 +132,6 @@
               "src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
